@@ -1,6 +1,17 @@
-var queryURL = "https://api.openweathermap.org/data/2.5/forecast?id=3582383&APIID=3fb1d926f6bf2a8a109a00d1602fd154";
+console.log("brand new {code}, city girls going platinum - yung miami");
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-});
+// ----------------- current weather forecast api call
+
+// get user input
+$("#search").on("click" , function (event) {
+    event.preventDefault;
+    let citySearch = document.querySelector(".form-control");
+    console.log(citySearch.value);
+
+})
+
+    
+
+// do current weather api call
+
+// return current weather data to */ 
