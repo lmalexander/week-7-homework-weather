@@ -31,7 +31,7 @@
                 <!--main area: city image, day/date, today's detailed forecast, five day forecast-->
                 <div class="col-sm-6">
                     <div class="row"> <!--city name header-->
-                        <h2>(city name)</h2>
+                        <h2 id="cityName"></h2>
                     </div><hr>
                     <div class="row"> <!--today forecast-->
                         <div class="col-sm-4"> <!--city image from google or wikipedia api-->
@@ -42,12 +42,12 @@
                                 <h3>Today is (day), (date)</h3>
                             </div><hr>
                             <div class="row">
-                                <div class="col-sm"><h5>Temperature: </h5></div>
-                                <div class="col-sm"><h5>Humidity: </h5></div>
+                                <div class="col-sm" id="currentTemp"><h5>Temperature: </h5></div>
+                                <div class="col-sm" id="currentHum"><h5>Humidity: </h5></div>
                             </div>
                             <div class="row">
-                                <div class="col-sm"><h5>Wind Speed: </h5></div>
-                                <div class="col-sm"><h5>UV Index: </h5></div>
+                                <div class="col-sm" id="currentWS"><h5>Wind Speed: </h5></div>
+                                <div class="col-sm" id="currentUVI"><h5>UV Index: </h5></div>
                             </div>
                         </div>
                     </div><hr>
