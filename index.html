@@ -1,35 +1,94 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
     <title>Weather Dashboard</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <!--style.css-->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div class="container">
-        <!--search input form-->
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label for="citySearch">City Name</label>
-                    <input type="city" class="form-control" id="cityInput" placeholder="Enter city name">
-                    <button class="btn btn-primary" id="search" type="submit">Search</button>
-                  </div>
-                  
-            </div>
-        </div>
+    <header>
+        <h1>Weather Forecasts</h1>
+    </header>
+<hr>
+    <section>
+        <div class="container">
+            <div class="row">
+                <!--sidebar: search input form and search history-->
+                <div class="col-sm-3" id="sidebarSearch">
+                        <form class="form-group sidebar">
+                            <label>City Name</label>
+                            <input type="search" class="form-control" id="searchBox" placeholder="Enter city name">
+                            <button class="btn btn-primary submit-button" id="searchButton" type="submit">Search</button>
+                            <ul class="list-group" id="previousSearch"> </ul>
+                        </form>
+                    </div>
+                <!--main area: city image, day/date, today's detailed forecast, five day forecast-->
+                <div class="col-sm-6">
+                    <div class="row"> <!--city name header-->
+                        <h2>(city name)</h2>
+                    </div><hr>
+                    <div class="row"> <!--today forecast-->
+                        <div class="col-sm-4"> <!--city image from google or wikipedia api-->
+                        <img src="chicago-city-skyline-on-a-sunny-day-usa-KERH2D.jpg" class="img-thumbnail" alt="Placeholder image of chicago skyline">
+                        </div>
+                        <div class="col-sm-6"> <!--weather forecast info-->
+                            <div class="row">
+                                <h3>Today is (day), (date)</h3>
+                            </div><hr>
+                            <div class="row">
+                                <div class="col-sm"><h5>Temperature: </h5></div>
+                                <div class="col-sm"><h5>Humidity: </h5></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm"><h5>Wind Speed: </h5></div>
+                                <div class="col-sm"><h5>UV Index: </h5></div>
+                            </div>
+                        </div>
+                    </div><hr>
+                    <div class="row"> <!--five day forecast header-->
+                    <h2>Five Day Forecast</h2>
+                    </div>
+                    <div class="row"> <!--five day forecasts-->
+                        <div class="col-sm">
+                            <div class="card-group">
+                                <div class="card"> <!--day-->
+                                    <img class="card-img-top" src="sun-icon.jpg" alt="Placeholder icon of a sun"> <!--weather icon-->
+                                    <div class="card-body">
+                                        <h5 class="card-title">(date)</h5>
+                                        <h5 class="card-title">(temperature)&deg;</h5>
+                                        <h5 class="card-title">(humidity)%</h5>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div> 
+    </section>
+<hr> 
+    <footer>
 
-        <!--current weather bootstrap card-->
+    </footer>
 
-    </div>
-
-    <script src="https://code.jquery.com/jquery.js"></script>
+<!--scripts-->
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--popper.js-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!--bootstrap.js-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!--scripts.js-->
     <script src="scripts.js"></script>
-
-
-
 </body>
 </html>
