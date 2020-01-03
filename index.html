@@ -39,7 +39,8 @@
                         </div>
                         <div class="col-sm-6"> <!--weather forecast info-->
                             <div class="row">
-                                <h3>Today is (day), (date)</h3>
+                                <h3 id="todayDate"></h3>
+                                <h3 id="timeNow"></h3>
                             </div><hr>
                             <div class="row">
                                 <div class="col-sm" id="currentTemp"><h5>Temperature: </h5></div>
@@ -56,13 +57,13 @@
                     </div>
                     <div class="row"> <!--five day forecasts-->
                         <div class="col-sm">
-                            <div class="card-group">
+                            <div class="card-group" id="forecastCardGroup">
                                 <div class="card"> <!--day-->
-                                    <img class="card-img-top" src="sun-icon.jpg" alt="Placeholder icon of a sun"> <!--weather icon-->
+                                    <img class="card-img-top" src="sun-icon.jpg" alt="Placeholder icon of a sun" id="forecastIcon"> <!--weather icon-->
                                     <div class="card-body">
-                                        <h5 class="card-title">(date)</h5>
-                                        <h5 class="card-title">(temperature)&deg;</h5>
-                                        <h5 class="card-title">(humidity)%</h5>
+                                        <h5 class="card-title" id="forecastDate">(date)</h5>
+                                        <h5 class="card-title" id="forecastTemp">(temperature)&deg;</h5>
+                                        <h5 class="card-title" id="forecastHum">(humidity)%</h5>
                                     </div>
                                 </div>
                                 
